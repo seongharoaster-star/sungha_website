@@ -163,18 +163,16 @@ router.post("/verify-token", (req, res) => {
   const token = req.cookies.token;
 
   if (!token) {
-    return res
-      .status(400)
-      .json({ isValid: false, message: "토큰이 유효하지 않습니다." });
+    return res.status(200).json({ isValid: false });
   }
+
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     return res.status(200).json({ isValid: true, user: decoded });
   } catch (error) {
-    return res
-      .status(401)
-      .json({ isValid: false, message: "유효하지 않은 토큰입니다." });
+    return res.status(200).json({ isValid: false });
   }
 });
+
 
 module.exports = router;
