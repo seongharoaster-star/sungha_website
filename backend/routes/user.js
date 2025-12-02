@@ -29,6 +29,8 @@ router.post("/signup", async (req, res) => {
   }
 });
 
+
+
 router.post("/login", async (req, res) => {
   try {
     const { username, password } = req.body;
@@ -94,15 +96,18 @@ router.post("/login", async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: "production",
-      sameSite: "strict",
+      secure: true,
+      sameSite: "none",
       maxAge: 24 * 60 * 60 * 1000,
     });
 
     const userWithoutPassword = user.toObject();
     delete userWithoutPassword.password;
 
-    res.json({ user: userWithoutPassword });
+  res.json({
+  user: userWithoutPassword,
+  token
+});
   } catch (error) {
     console.error("서버 오류:", error.message);
     res.status(500).json({ message: "서버 오류가 발생했습니다." });
@@ -131,8 +136,8 @@ router.post("/logout", async (req, res) => {
 
     res.clearCookie("token", {
       httpOnly: true,
-      secure: false,
-      sameSite: "strict",
+      secure: true,
+      sameSite: "none",
     });
 
     res.json({ message: "로그아웃되었습니다." });
