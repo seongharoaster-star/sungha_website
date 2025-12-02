@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import mainpage from "/assets/mainImgxl.png";
+import mainpage from "../../assets/mainImgXL.png";
 import mainpageMobile from "../../assets/mainImg_mobile.png";
 import mainpageTablet from "../../assets/mainImg_tablet.png";
 import { IoConstructSharp } from "react-icons/io5";
