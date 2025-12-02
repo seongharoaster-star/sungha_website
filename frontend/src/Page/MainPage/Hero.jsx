@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import mainpage from "../../assets/mainImgxl.png";
+import mainpage from "/assets/mainImgxl.png";
 import mainpageMobile from "../../assets/mainImg_mobile.png";
-import mainpageTablet from "../../assets/mainImg_tablet.png"; // ⭐ 추가
+import mainpageTablet from "../../assets/mainImg_tablet.png";
 import { IoConstructSharp } from "react-icons/io5";
 import { MdAccessTime } from "react-icons/md";
 import { BsArrowRepeat } from "react-icons/bs";
