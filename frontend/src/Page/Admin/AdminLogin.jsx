@@ -31,7 +31,8 @@ const AdminLogin = () => {
         }
       );
 
-      if (response.data.user) {
+      if (response.data.token) {
+        localStorage.setItem("token", response.data.token);
         navigate("/admin/posts");
       }
     } catch (error) {

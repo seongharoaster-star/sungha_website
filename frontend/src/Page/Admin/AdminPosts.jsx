@@ -7,11 +7,17 @@ const AdminPosts = () => {
   const postsPerPage = 5;
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
     const fetchRequest = async () => {
       try {
-        const response = await axios.get("https://sungha-website.onrender.com/api/request", {
-          withCredentials: true,
-        });
+        const response = await axios.get(
+          "https://sungha-website.onrender.com/api/request",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
         setPosts(response.data);
       } catch (error) {
         console.log("데이터 가져오기 실패:", error);
@@ -28,7 +34,9 @@ const AdminPosts = () => {
           status: newStatus,
         },
         {
-          withCredentials: true,
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         }
       );
 
