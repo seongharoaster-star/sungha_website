@@ -12,7 +12,7 @@ const requestRoutes = require("./routes/request");
 
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://sungha-rnf.netlify.app",
   credentials: true,
 }));
 

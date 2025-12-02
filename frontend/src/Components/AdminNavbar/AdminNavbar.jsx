@@ -11,7 +11,7 @@ const AdminNavbar = () => {
   const handleLogout = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/auth/logout",
+        "https://sungha-website.onrender.com/api/auth/logout",
         {},
         { withCredentials: true }
       );

@@ -114,7 +114,7 @@ const Request = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/request",
+        "https://sungha-website.onrender.com/api/request",
         requestData
       );
 

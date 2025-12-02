@@ -9,7 +9,7 @@ const AdminPosts = () => {
   useEffect(() => {
     const fetchRequest = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/request", {
+        const response = await axios.get("https://sungha-website.onrender.com/api/request", {
           withCredentials: true,
         });
         setPosts(response.data);
@@ -23,7 +23,7 @@ const AdminPosts = () => {
   const handleStatusChange = async (id, newStatus) => {
     try {
       await axios.put(
-        `http://localhost:3000/api/request/${id}`,
+        `https://sungha-website.onrender.com/api/request/${id}`,
         {
           status: newStatus,
         },

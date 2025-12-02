@@ -15,7 +15,7 @@ const AdminContacts = () => {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/contact", {
+        const response = await axios.get("https://sungha-website.onrender.com/api/contact", {
           withCredentials: true,
         });
 
@@ -36,7 +36,7 @@ const AdminContacts = () => {
   const handleStatusUpdate = async (newStatus) => {
     try {
       await axios.put(
-        `http://localhost:3000/api/contact/${selectedContact._id}`,
+        `https://sungha-website.onrender.com/api/contact/${selectedContact._id}`,
         { status: newStatus },
         { withCredentials: true }
       );
@@ -68,7 +68,7 @@ const AdminContacts = () => {
     });
     if (result.isConfirmed) {
       try {
-        await axios.delete(`http://localhost:3000/api/contact/${id}`, {
+        await axios.delete(`https://sungha-website.onrender.com/api/contact/${id}`, {
           withCredentials: true,
         });
 

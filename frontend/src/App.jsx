@@ -40,7 +40,7 @@ function AuthRedirectRoute() {
     const verifyToken = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:3000/api/auth/verify-token",
+          "https://sungha-website.onrender.com/api/auth/verify-token",
           {},
           { withCredentials: true }
         );
@@ -67,7 +67,7 @@ function ProtectedRoute() {
     const verifyToken = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:3000/api/auth/verify-token",
+          "https://sungha-website.onrender.com/api/auth/verify-token",
           {},
           { withCredentials: true }
         );
