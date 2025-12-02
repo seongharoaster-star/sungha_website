@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'MinSans-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: 'MinSans-Regular';
+}
+  .scrollbar-light {
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db transparent;
+  }
+  .scrollbar-light::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scrollbar-light::-webkit-scrollbar-thumb {
+    background-color: #d1d5db; /* Tailwind gray-300 */
+    border-radius: 9999px;
+  }
+  .scrollbar-light::-webkit-scrollbar-track {
+    background: transparent;
+  }

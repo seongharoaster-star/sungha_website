@@ -1,0 +1,179 @@
+import React, { useState } from "react";
+import axios from "axios";
+
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    region: "",
+    phone: "",
+    message: "",
+    status: "in progress",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/api/contact",
+        formData
+      );
+
+      if (response.status === 201) {
+        alert("문의가 성공적으로 접수되었습니다.");
+        setFormData({
+          name: "",
+          region: "",
+          phone: "",
+          message: "",
+          status: "in progress",
+        });
+      }
+    } catch (error) {
+      console.log("에러 발생: ", error);
+      alert("문의 접수 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.");
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-white py-32">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+            상담하기
+          </h1>
+          <p className=" text-gray-600 max-w-3xl mx-auto">
+            초기 설계 부터 유지보수까지, 전문가와 상담하세요. 24시간 내에
+            답변드리겠습니다.
+          </p>
+        </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div>
+            <form
+              className="bg-white rounded-2xl shadow-xl p-8"
+              onSubmit={handleSubmit}
+            >
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-gray-700 font-medium mb-2">
+                    상호 또는 이름
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    className="w-full p-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors duration-300"
+                    placeholder="홍길동"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-700 font-medium mb-2">
+                    지역
+                  </label>
+                  <input
+                    type="region"
+                    name="region"
+                    className="w-full p-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors duration-300"
+                    placeholder="서울 종로구"
+                    required
+                    value={formData.region}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-700 font-medium mb-2">
+                    전화번호
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    className="w-full p-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors duration-300"
+                    placeholder="010-1234-5678"
+                    required
+                    value={formData.phone}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-700 font-medium mb-2">
+                    문의 내용
+                  </label>
+                  <textarea
+                    name="message"
+                    className="w-full p-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors duration-300 h-40"
+                    placeholder="문의하실 내용을 자세히 적어주세요."
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
+                  />
+                </div>
+                <button className="w-full bg-blue-600 text-white py-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300">
+                  문의하기
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div className="space-y-8">
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-800 mb-6">
+                연락처 정보
+              </h3>
+              <div className="space-y-6">
+                {[
+                  {
+                    title: "전화",
+                    info: "032-562-2689",
+                    desc: "평일 09:00 - 18:00",
+                  },
+                  {
+                    title: "이메일",
+                    info: "seongha1002@naver.com",
+                    desc: "24시간 접수 가능",
+                  },
+                  {
+                    title: "주소",
+                    info: "인천광역시 보듬3로 11",
+                    desc: "방문 시 예약 필수",
+                  },
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="ml-4">
+                      <h4 className="font-medium text-gray-800">
+                        {item.title}
+                      </h4>
+                      <p className="text-gray-600">{item.info}</p>
+                      <p className="text-sm text-gray-500">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.2084327161947!2d126.6114536765005!3d37.597253272030756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c8074bc98bc5f%3A0x4f08a4bbac2d0e9!2z7J247LKc6rSR7Jet7IucIOyEnOq1rCDrs7Trk6wz66GcIDEx!5e0!3m2!1sko!2skr!4v1740374681249!5m2!1sko!2skr"
+                width="100%"
+                height="400"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-[400px] md:h-[600px] lg:h-[600px]"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;
