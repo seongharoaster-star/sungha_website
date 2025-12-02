@@ -46,7 +46,6 @@ function AuthRedirectRoute() {
         );
         setIsAuthenticated(true);
       } catch (error) {
-        console.log("토큰 인증 실패: ", error);
         setIsAuthenticated(false);
       }
     };
