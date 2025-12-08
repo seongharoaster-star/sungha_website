@@ -1,16 +1,18 @@
-import React from 'react'
-import Hero from './Hero'
-import Contact from './Contact'
-import Portpolio from './PortPolio'
+import React from "react";
+import Hero from "./Hero";
+import Contact from "./Contact";
+import Portpolio from "./PortPolio";
+import Banner from "./Banner";
 
 const MainPage = () => {
   return (
     <div>
-      <Hero />
+      <Banner />
       <Portpolio />
-      <Contact />  
+      <Hero />
+      <Contact />
     </div>
-  )
-}
+  );
+};
 
-export default MainPage
+export default MainPage;

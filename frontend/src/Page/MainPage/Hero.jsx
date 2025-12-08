@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import mainpage from "../../assets/mainImgXL.png";
-import mainpageMobile from "../../assets/mainImg_mobile.png";
-import mainpageTablet from "../../assets/mainImg_tablet.png";
 import { IoConstructSharp } from "react-icons/io5";
 import { MdAccessTime } from "react-icons/md";
 import { BsArrowRepeat } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
+import uptta from "../../assets/uptta.png";
+import downtta from "../../assets/downtta.png";
 
 const Hero = () => {
   const cards = [
@@ -36,51 +35,77 @@ const Hero = () => {
     },
   ];
 
-  // ⭐ 모바일·태블릿·PC 3단계 분기
-  const [deviceType, setDeviceType] = useState(
-    window.innerWidth < 450
-      ? "mobile"
-      : window.innerWidth < 1024
-      ? "tablet"
-      : "pc"
-  );
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 450) {
-        setDeviceType("mobile");
-      } else if (window.innerWidth < 1024) {
-        setDeviceType("tablet");
-      } else {
-        setDeviceType("pc");
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // ⭐ 이미지 선택 로직
-  const getImageByDevice = () => {
-    if (deviceType === "mobile") return mainpageMobile;
-    if (deviceType === "tablet") return mainpageTablet;
-    return mainpage; // PC
-  };
-
   return (
-    <div className="relative min-h-[110vh] bg-black pt-10 pb-20">
-      {/* 메인 이미지 */}
-      <div className="w-full h-[450px] md:h-[700px] overflow-hidden flex justify-center items-center bg-black">
-        <img
-          src={getImageByDevice()}
-          className="w-full h-full object-cover"
-          alt="Main Page"
-        />
-      </div>
+    <div className="relative bg-black py-20">
+      <div className="w-full flex justify-center px-4 my-8 sm:my-10">
+        <div className="text-center w-full max-w-[800px]">
+          {/* 상단 따옴표 */}
+          <motion.img
+            src={uptta}
+            className="w-8 sm:w-14 mx-auto mb-4 sm:mb-8 opacity-90"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          />
 
-      {/* 카드 섹션 */}
+          {/* 첫 줄 */}
+          <motion.div
+            className="text-xl sm:text-2xl md:text-4xl text-gray-300 font-medium leading-snug"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            외식 공간 스토리텔링을 이끄는
+          </motion.div>
+
+          {/* 모바일용 (줄바꿈 버전) */}
+          <motion.div
+            className="block sm:hidden text-4xl py-2 text-white font-SchoolSafetyWave font-bold leading-tight"
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.35 }}
+          >
+            커스터마이징 디자인 <br /> 로스타·불판
+          </motion.div>
+
+          {/* 태블릿/PC용 (한 줄 버전) */}
+          <motion.div
+            className="hidden sm:block text-4xl md:text-[45px] py-2 text-white font-SchoolSafetyWave font-bold leading-tight"
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.35 }}
+          >
+            커스터마이징 디자인 로스타·불판
+          </motion.div>
+
+          {/* 세 번째 줄 */}
+          <motion.div
+            className="text-xl sm:text-2xl md:text-4xl text-gray-300 font-medium leading-snug"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            업계 1위 기업
+          </motion.div>
+
+          {/* 하단 따옴표 */}
+          <motion.img
+            src={downtta}
+            className="w-8 sm:w-14 mx-auto mt-4 sm:mt-8 opacity-90"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.65 }}
+          />
+        </div>
+      </div>
       <div className="container mx-auto py-10 pb-28 px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
           {cards.map((card, index) => (
             <motion.div
               key={index}
