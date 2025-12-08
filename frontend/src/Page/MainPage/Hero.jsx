@@ -110,15 +110,14 @@ const Hero = () => {
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="
-                text-center bg-darkbg rounded-xl 
-                w-full h-[240px] sm:h-[260px] md:h-[300px]
-                flex flex-col items-center justify-center
-                transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-lg
-              "
+    text-center bg-darkbg rounded-xl 
+    w-full h-[240px] sm:h-[260px] md:h-[300px]
+    flex flex-col items-center justify-center
+    transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-lg
+  "
             >
               <div className="text-5xl sm:text-6xl md:text-7xl text-gray-100 py-3">
                 {card.icon}
