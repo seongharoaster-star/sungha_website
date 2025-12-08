@@ -126,7 +126,7 @@ const Banner = () => {
       <div
         className="
           flex md:hidden
-          w-full min-h-[70vh]
+          w-full min-h-[100vh]
           items-center justify-center
           bg-center bg-no-repeat bg-cover relative
         "
