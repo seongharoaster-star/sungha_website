@@ -34,6 +34,8 @@ import Plate from "./Page/Products/Plate";
 import Others from "./Page/Products/Others";
 import Table from "./Page/Products/Table";
 
+const Request = lazy(() => import("./Page/Request/Request"));
+
 function AuthRedirectRoute() {
   const [isAuthenticated, setIsAuthenticated] = useState(null);
 
@@ -150,7 +152,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/request",
-        element: <Request />,
+        element: (
+          <Suspense fallback={<div className="text-center mt-20">로딩중…</div>}>
+            <Request />
+          </Suspense>
+        ),
       },
       {
         path: "/contact",
