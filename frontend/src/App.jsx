@@ -14,7 +14,7 @@ import {
 } from "react-router-dom";
 import axios from "axios";
 
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./Components/ScrollToTop";
 
 import MainPage from "./Page/MainPage/MainPage";
 import About from "./Page/About/About";
