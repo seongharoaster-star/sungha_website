@@ -1,8 +1,8 @@
 import React from "react";
 import companyImage from "../../assets/officeinfo.jpg";
-import value1 from "../../assets/value1.png";
-import value2 from "../../assets/value2.png";
-import value3 from "../../assets/value3.png";
+import value1 from "../../assets/value1.jpg";
+import value2 from "../../assets/value2.jpg";
+import value3 from "../../assets/value3.jpg";
 
 const About = () => {
   return (
