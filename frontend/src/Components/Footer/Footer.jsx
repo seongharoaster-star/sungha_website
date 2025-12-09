@@ -83,19 +83,19 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">소셜미디어</h3>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://blog.naver.com/sh-rnf"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <FaBlogger />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@seongharoaster"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <IoLogoYoutube />
               </a>
               <a
-                href="#"
+                href="https://smartstore.naver.com/sh_roster"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <FaShoppingBasket />
