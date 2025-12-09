@@ -1,14 +1,14 @@
 import React, { useCallback, useMemo, useState, useEffect } from "react";
-import yeontan5gu from "../../assets/request/5gu.jpg";
-import circle_cart from "../../assets/request/circle_cart.jpg";
-import squre_cart from "../../assets/request/squre_cart.jpg";
-import yeontan7gu from "../../assets/request/7gu.jpg";
-import two_cart from "../../assets/request/two_cart.jpg";
-import suttong_dubgae from "../../assets/request/suttong_dubgae.jpg";
-import bulpan_deulgae from "../../assets/request/bulpan_deulgae.jpg";
-import suttong_deulgae from "../../assets/request/suttong_deulgae.jpg";
-import deulgaegyeomdeobgae from "../../assets/request/deulgaegyeomdeobgae.jpg";
-import square_liftcover from "../../assets/request/square_liftcover.jpg";
+import yeontan5gu from "../../assets/request/5gu.webp";
+import circle_cart from "../../assets/request/circle_cart.webp";
+import squre_cart from "../../assets/request/squre_cart.webp";
+import yeontan7gu from "../../assets/request/7gu.webp";
+import two_cart from "../../assets/request/two_cart.webp";
+import suttong_dubgae from "../../assets/request/suttong_dubgae.webp";
+import bulpan_deulgae from "../../assets/request/bulpan_deulgae.webp";
+import suttong_deulgae from "../../assets/request/suttong_deulgae.webp";
+import deulgaegyeomdeobgae from "../../assets/request/deulgaegyeomdeobgae.webp";
+import square_liftcover from "../../assets/request/square_liftcover.webp";
 import { X } from "lucide-react";
 
 const STORAGE_KEY = "otherModal:lastSelection";

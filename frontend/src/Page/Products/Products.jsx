@@ -1,14 +1,14 @@
 import React from "react";
-import product_table from "../../assets/product/product_table.png";
-import product_cart from "../../assets/product/product_cart.png";
-import product_grill from "../../assets/product/product_grill.png";
-import product_mesh from "../../assets/product/product_mesh.png";
-import product_move from "../../assets/product/product_move.png";
-import product_roaster from "../../assets/product/product_roaster.png";
-import product_steamer from "../../assets/product/product_steamer.png";
-import product_storage from "../../assets/product/product_storage.png";
-import product_yeontan from "../../assets/product/product_yeontan.png";
-import product_liftcover from "../../assets/product/product_liftcover.png";
+import product_table from "../../assets/product/product_table.webp";
+import product_cart from "../../assets/product/product_cart.webp";
+import product_grill from "../../assets/product/product_grill.webp";
+import product_mesh from "../../assets/product/product_mesh.webp";
+import product_move from "../../assets/product/product_move.webp";
+import product_roaster from "../../assets/product/product_roaster.webp";
+import product_steamer from "../../assets/product/product_steamer.webp";
+import product_storage from "../../assets/product/product_storage.webp";
+import product_yeontan from "../../assets/product/product_yeontan.webp";
+import product_liftcover from "../../assets/product/product_liftcover.webp";
 
 
 

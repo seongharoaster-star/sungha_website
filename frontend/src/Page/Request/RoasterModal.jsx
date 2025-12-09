@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import circle from "../../assets/request/circle.jpg";
-import twin from "../../assets/request/twin.jpg";
-import shellfish from "../../assets/request/shellfish.jpg";
-import sheep from "../../assets/request/sheep.jpg";
-import square from "../../assets/request/square.jpg";
-import side from "../../assets/request/side.jpg";
-import top from "../../assets/request/top.jpg";
-import laser from "../../assets/request/laser.jpg";
-import plating from "../../assets/request/plating.jpg";
-import wamer from "../../assets/request/wamer.jpg";
-import windmotor from "../../assets/request/windmotor.jpg";
+import circle from "../../assets/request/circle.webp";
+import twin from "../../assets/request/twin.webp";
+import shellfish from "../../assets/request/shellfish.webp";
+import sheep from "../../assets/request/sheep.webp";
+import square from "../../assets/request/square.webp";
+import side from "../../assets/request/side.webp";
+import top from "../../assets/request/top.webp";
+import laser from "../../assets/request/laser.webp";
+import plating from "../../assets/request/plating.webp";
+import wamer from "../../assets/request/wamer.webp";
+import windmotor from "../../assets/request/windmotor.webp";
 import { X } from "lucide-react";
 
 const STORAGE_KEY = "roasterModal:lastSelection";
