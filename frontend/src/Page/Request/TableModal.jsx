@@ -1,10 +1,10 @@
 import React, { useCallback, useMemo, useState } from "react";
-import pipeleg from "../../assets/request/pipeleg.png";
-import drumtong from "../../assets/request/drumtong.png";
-import totalleg from "../../assets/request/totalleg.png";
-import spoon from "../../assets/request/spoon.png";
-import habujang from "../../assets/request/habujang.png";
-import cabinet from "../../assets/request/cabinet.png";
+import pipeleg from "../../assets/request/pipeleg.jpg";
+import drumtong from "../../assets/request/drumtong.jpg";
+import totalleg from "../../assets/request/totalleg.jpg";
+import spoon from "../../assets/request/spoon.jpg";
+import habujang from "../../assets/request/habujang.jpg";
+import cabinet from "../../assets/request/cabinet.jpg";
 import { X } from "lucide-react";
 
 const STORAGE_KEY = "tableModal:lastSelection";

@@ -14,6 +14,8 @@ import {
 } from "react-router-dom";
 import axios from "axios";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 import MainPage from "./Page/MainPage/MainPage";
 import About from "./Page/About/About";
 import Portpolio from "./Page/Portpolio/Portpolio";
@@ -31,7 +33,6 @@ import Roaster from "./Page/Products/Roaster";
 import Plate from "./Page/Products/Plate";
 import Others from "./Page/Products/Others";
 import Table from "./Page/Products/Table";
-
 
 function AuthRedirectRoute() {
   const [isAuthenticated, setIsAuthenticated] = useState(null);
@@ -94,6 +95,7 @@ function ProtectedRoute() {
 function Layout() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Outlet />
       <Footer />
@@ -135,12 +137,11 @@ const router = createBrowserRouter([
         path: "/products",
         element: <Products />,
         children: [
-          { index: true, element: <Navigate to="roaster" replace /> }, 
+          { index: true, element: <Navigate to="roaster" replace /> },
           { path: "roaster", element: <Roaster /> },
-           { path: "plate", element: <Plate /> },
+          { path: "plate", element: <Plate /> },
           { path: "table", element: <Table /> },
           { path: "others", element: <Others /> },
-
         ],
       },
       {
@@ -192,7 +193,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
 export default App;

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import roaster from "../../assets/request/roaster.png";
-import grill from "../../assets/request/grill.png";
-import table from "../../assets/request/table.png";
-import etc from "../../assets/request/etc.png";
+import roaster from "../../assets/request/roaster.jpg";
+import grill from "../../assets/request/grill.jpg";
+import table from "../../assets/request/table.jpg";
+import etc from "../../assets/request/etc.jpg";
 import RoasterModal from "./RoasterModal";
 import GrillModal from "./GrillModal";
 import TableModal from "./TableModal";
