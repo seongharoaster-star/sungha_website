@@ -25,7 +25,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/"
+                  to="/about"
                   onClick={scrollToTop}
                   className="hover:text-white transition-colors"
                 >
@@ -34,7 +34,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/portpolio"
                   onClick={scrollToTop}
                   className="hover:text-white transition-colors"
                 >
@@ -43,7 +43,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/products"
                   onClick={scrollToTop}
                   className="hover:text-white transition-colors"
                 >
@@ -52,7 +52,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/request"
                   onClick={scrollToTop}
                   className="hover:text-white transition-colors"
                 >
@@ -61,7 +61,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/contact"
                   onClick={scrollToTop}
                   className="hover:text-white transition-colors"
                 >
