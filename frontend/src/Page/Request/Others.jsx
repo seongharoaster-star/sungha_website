@@ -65,7 +65,11 @@ const OptionCard = ({ item, selected, onSelect, disabled }) => {
       )}
     >
       {item.img && (
-        <img src={item.img} className="mx-auto block" alt={item.name || item.id} />
+        <img
+          src={item.img}
+          className="mx-auto block"
+          alt={item.name || item.id}
+        />
       )}
       <p className="flex items-center justify-center text-center mt-1 min-h-[30px] whitespace-pre-line leading-tight">
         {item.name}
@@ -141,7 +145,7 @@ const OptionSection = ({
   );
 };
 
-const OtherModal = ({ onClose, initialData }) => {
+const OtherModal = ({ onClose, initialData, reset }) => {
   const [selectedCart, setSelectedCart] = useState(
     initialData?.cart
       ? CARTS.find((c) => c.name === initialData.cart) ?? null
@@ -157,6 +161,13 @@ const OtherModal = ({ onClose, initialData }) => {
   );
 
   useEffect(() => {
+    if (reset) {
+      setSelectedCart(null);
+      setSelectedIgniter(null);
+      setSelectedEtc([]);
+      return;
+    }
+
     try {
       const raw =
         sessionStorage.getItem("othersConfig") ||
@@ -262,7 +273,9 @@ const OtherModal = ({ onClose, initialData }) => {
         <div className="flex justify-center">
           <button
             onClick={handleComplete}
-            disabled={!selectedCart && !selectedIgniter && selectedEtc.length === 0}
+            disabled={
+              !selectedCart && !selectedIgniter && selectedEtc.length === 0
+            }
             className={cn(
               "px-6 py-2 mt-6 rounded-lg transition-colors max-sm:w-full",
               !selectedCart && !selectedIgniter && selectedEtc.length === 0

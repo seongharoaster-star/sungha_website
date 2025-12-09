@@ -14,7 +14,7 @@ import { X } from "lucide-react";
 
 const STORAGE_KEY = "roasterModal:lastSelection";
 
-const RoasterModal = ({ onClose }) => {
+const RoasterModal = ({ onClose, reset }) => {
   const [selectedShape, setSelectedShape] = useState(null);
   const [selectedDuct, setSelectedDuct] = useState(null);
   const [selectedFuel, setSelectedFuel] = useState(null);
@@ -133,7 +133,7 @@ const shapes = [
   const [restored, setRestored] = useState(false);
 
   useEffect(() => {
-    if (restored) return;
+     if (reset || restored) return;
     try {
       const raw = sessionStorage.getItem(STORAGE_KEY);
       if (!raw) return;

@@ -35,7 +35,7 @@ import circle_guard_design from "../../assets/request/circle_guard_design.webp";
 
 const STORAGE_KEY = "grillModal:lastSelection";
 
-const GrillModal = ({ onClose }) => {
+const GrillModal = ({ onClose, reset }) => {
   const shapes = [
     { id: "circle", name: "원형", label: "원형: 295Ø, 330Ø" },
     { id: "square", name: "사각", label: "사각: 정사각, 직사각, 장어구이기 등" },
@@ -137,6 +137,18 @@ const GrillModal = ({ onClose }) => {
 
   // 🔹 복원
   useEffect(() => {
+      if (reset) {
+    // ⭐ reset일 때 완전 초기화
+    setSelectedShape(null);
+    setSelectedCircleOption(null);
+    setSelectedSquareOption(null);
+    setSelectedMaterial(null);
+    setSelectedHandle(null);
+    setSelectedGuard(null);
+    setIsRestored(true);
+    return;   // ← 복구 로직 실행 안 함!
+  }
+  
     try {
       const raw = sessionStorage.getItem(STORAGE_KEY);
       if (raw) {

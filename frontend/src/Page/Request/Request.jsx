@@ -157,6 +157,7 @@ const Request = () => {
         return (
           <RoasterModal
             key={roasterResetKey}
+            reset={roasterSelections === null}
             onClose={(data) => {
               setIsModalOpen(false);
               if (data) setRoasterSelections(data);
@@ -167,6 +168,7 @@ const Request = () => {
         return (
           <GrillModal
             key={grillResetKey}
+            reset={grillSelections === null}
             onClose={(data) => {
               setIsModalOpen(false);
               if (data) setGrillSelections(data);
@@ -177,6 +179,7 @@ const Request = () => {
         return (
           <TableModal
             key={tableResetKey}
+            reset={tableSelections === null}
             onClose={(data) => {
               setIsModalOpen(false);
               if (data) setTableSelections(data);
@@ -187,6 +190,7 @@ const Request = () => {
         return (
           <OtherModal
             key={otherResetKey}
+            reset={otherSelections === null}
             initialData={otherSelections}
             onClose={(data) => {
               setIsModalOpen(false);
