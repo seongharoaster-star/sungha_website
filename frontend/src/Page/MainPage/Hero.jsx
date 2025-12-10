@@ -13,13 +13,13 @@ const Hero = () => {
       icon: <IoConstructSharp />,
       number: "1,000+",
       label: "설치 완료",
-      explain: "수많은 고객이 택한 신뢰의 기술력",
+      explain: "수많은 고객이 택한\n신뢰의 기술력",
     },
     {
       icon: <BsArrowRepeat />,
       number: "92%",
       label: "재주문율",
-      explain: "고객 경험이 증명한 높은 만족도",
+      explain: "고객 경험이 증명한\n높은 만족도",
     },
     {
       icon: <MdAccessTime />,
@@ -31,7 +31,7 @@ const Hero = () => {
       icon: <BiSupport />,
       number: "24/7",
       label: "기술 지원",
-      explain: "문제 발생 시 언제든 빠른 대응 지원",
+      explain: "문제 발생 시 언제든\n빠른 대응 지원",
     },
   ];
 
@@ -105,7 +105,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="container mx-auto py-10 pb-28 px-4">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto sm:gap-8">
           {cards.map((card, index) => (
             <motion.div
               key={index}
