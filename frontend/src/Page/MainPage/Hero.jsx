@@ -36,7 +36,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="relative bg-black py-20">
+    <div className="relative bg-black pt-20">
       <div className="w-full flex justify-center px-4 my-8 sm:my-10">
         <div className="text-center w-full max-w-[800px]">
           {/* 상단 따옴표 */}
