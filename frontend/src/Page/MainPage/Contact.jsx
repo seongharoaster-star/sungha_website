@@ -29,18 +29,38 @@ const Contact = () => {
             {
               title: "카톡 상담",
               info: "카톡플친: @성하로스타",
-              subInfo: "",
+              subInfo: "클릭하면 카카오톡 채널로 연결됩니다.",
+              link: "https://pf.kakao.com/_gvSxgG",
             },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="bg-darkbg p-6 rounded-xl shadow hover:shadow-md transition-shadow duration-300 text-center"
-            >
-              <h3 className="text-orange text-xl font-bold mb-2">{item.title}</h3>
-              <p className="text-gray-200">{item.info}</p>
-              <p className="text-gray-300 text-sm">{item.subInfo}</p>
-            </div>
-          ))}
+          ].map((item, index) =>
+            item.link ? (
+              // 🔥 카톡 상담만 링크로 감싸기
+              <a
+                key={index}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-darkbg p-6 rounded-xl shadow hover:shadow-md transition-shadow duration-300 text-center block"
+              >
+                <h3 className="text-orange text-xl font-bold mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-200">{item.info}</p>
+                <p className="text-gray-300 text-sm">{item.subInfo}</p>
+              </a>
+            ) : (
+              <div
+                key={index}
+                className="bg-darkbg p-6 rounded-xl shadow hover:shadow-md transition-shadow duration-300 text-center"
+              >
+                <h3 className="text-orange text-xl font-bold mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-200">{item.info}</p>
+                <p className="text-gray-300 text-sm">{item.subInfo}</p>
+              </div>
+            )
+          )}
         </div>
 
         <div className="mb-12 max-w-4xl mx-auto">

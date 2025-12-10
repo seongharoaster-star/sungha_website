@@ -84,3 +84,9 @@
 .animate-slideUp {
   animation: slideUp 0.8s ease forwards;
 }
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+}
