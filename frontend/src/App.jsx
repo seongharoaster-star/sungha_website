@@ -5,7 +5,8 @@ import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
 import AdminNavbar from "./Components/AdminNavbar/AdminNavbar";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -20,7 +21,6 @@ import MainPage from "./Page/MainPage/MainPage";
 import About from "./Page/About/About";
 import Portpolio from "./Page/Portpolio/Portpolio";
 import Products from "./Page/Products/Products";
-import Request from "./Page/Request/Request";
 import Contact from "./Page/Contact/Contact";
 
 import AdminLogin from "./Page/Admin/AdminLogin";
@@ -34,7 +34,7 @@ import Plate from "./Page/Products/Plate";
 import Others from "./Page/Products/Others";
 import Table from "./Page/Products/Table";
 
-const Request = lazy(() => import("./Page/Request/Request"));
+const RequestPage = lazy(() => import("./Page/Request/Request"));
 
 function AuthRedirectRoute() {
   const [isAuthenticated, setIsAuthenticated] = useState(null);
@@ -154,7 +154,7 @@ const router = createBrowserRouter([
         path: "/request",
         element: (
           <Suspense fallback={<div className="text-center mt-20">로딩중…</div>}>
-            <Request />
+            <RequestPage />
           </Suspense>
         ),
       },

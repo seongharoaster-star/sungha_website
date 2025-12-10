@@ -7,7 +7,7 @@ import mongtan from "../../assets/mongtan.jpg";
 import yanginhwandae from "../../assets/yanginhwandae.jpg";
 import shinsa from "../../assets/shinsa.jpg";
 import majangdong from "../../assets/majagdong.jpg";
-
+import { useNavigate } from "react-router-dom";
 
 const Portpolio = () => {
   const executives = [
@@ -43,6 +43,8 @@ const Portpolio = () => {
 
   // 👉 화면 크기에 따라 보여줄 데이터 수 조절
   const [visibleExecutives, setVisibleExecutives] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const updateSize = () => {
@@ -125,6 +127,16 @@ const Portpolio = () => {
             </div>
           ))}
         </div>
+        {window.innerWidth < 1024 && (
+          <div className="text-right pt-4">
+            <button
+              onClick={() => navigate("/portpolio")}
+              className="text-gray-300 text-sm"
+            >
+              더보기 &gt;
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
