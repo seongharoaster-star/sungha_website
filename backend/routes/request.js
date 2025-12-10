@@ -63,4 +63,18 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.delete("/:id", async (req, res) => {
+  try {
+    const deleted = await Request.findByIdAndDelete(req.params.id);
+
+    if (!deleted) {
+      return res.status(404).json({ message: "삭제할 요청을 찾지 못했습니다." });
+    }
+
+    res.json({ success: true, message: "삭제 완료" });
+  } catch (error) {
+    console.error("❌ 삭제 오류:", error);
+    res.status(500).json({ message: "서버 오류" });
+  }
+});
 module.exports = router;

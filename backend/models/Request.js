@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const RequestSchema = new mongoose.Schema(
+const requestSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -73,4 +73,4 @@ const RequestSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Request", RequestSchema);
+module.exports = mongoose.model("Request", requestSchema);
