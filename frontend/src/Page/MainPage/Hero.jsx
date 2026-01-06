@@ -42,7 +42,7 @@ const Hero = () => {
           {/* 상단 따옴표 */}
           <motion.img
             src={uptta}
-            className="w-8 sm:w-14 mx-auto mb-4 sm:mb-8 opacity-90"
+            className="w-6 sm:w-8 mx-auto mb-4 sm:mb-8 opacity-90"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -95,8 +95,8 @@ const Hero = () => {
 
           {/* 하단 따옴표 */}
           <motion.img
-            src={downtta}
-            className="w-8 sm:w-14 mx-auto mt-4 sm:mt-8 opacity-90"
+            src={uptta}
+            className="w-6 sm:w-8 mx-auto mt-4 sm:mt-8 opacity-90"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

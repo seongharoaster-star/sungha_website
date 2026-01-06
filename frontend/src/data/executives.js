@@ -74,6 +74,11 @@ const executives = [
     position: "여의도점, 성수점, 정자점 외",
     imageUrl: "tidalFlatClams.webp",
   },
+    {
+    name: "묵힘",
+    position: "방이동",
+    imageUrl: "mukhim.webp",
+  },
   {
     name: "녹지",
     position: "마곡본점, 마포점, 종로점 외",
@@ -123,6 +128,11 @@ const executives = [
     name: "야끼니꾸 규화",
     position: "경기 하남시",
     imageUrl: "guhwa.webp",
+  },
+    {
+    name: "태백숯불닭갈비",
+    position: "태백",
+    imageUrl: "taebackmulgalbi.webp",
   },
   {
     name: "화연산장",
