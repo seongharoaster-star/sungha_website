@@ -351,7 +351,7 @@ const Request = () => {
 
             <input
               type="text"
-              placeholder="이름"
+              placeholder="상호 또는 이름"
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
               className="border rounded-lg w-full px-4 py-2 mb-3 text-sm"
