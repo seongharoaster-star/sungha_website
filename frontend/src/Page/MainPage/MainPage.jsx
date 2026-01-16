@@ -75,7 +75,7 @@ const MainPage = () => {
 
             {/* 팝업 이미지 */}
             <img
-              src="/popup.png"
+              src="/popup.webp"
               alt="팝업"
               style={{ width: "100%", display: "block" }}
             />
