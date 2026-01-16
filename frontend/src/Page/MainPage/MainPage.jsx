@@ -85,6 +85,7 @@ const MainPage = () => {
               style={{
                 display: "flex",
                 alignItems: "center",
+                justifyContent: "flex-end",
                 gap: 8,
                 padding: "12px 16px",
                 fontSize: 14,
