@@ -99,6 +99,41 @@ const executives = [
     position: "마곡본가",
     imageUrl: "100yearsjanguh.webp",
   },
+    {
+    name: "안국약방",
+    position: "종로",
+    imageUrl: "angukyakbang.webp",
+  },
+    {
+    name: "양화돌판삼겹",
+    position: "오목교",
+    imageUrl: "yanghwadolpan.webp",
+  },
+    {
+    name: "궤네깃도중문흑돼지",
+    position: "제주본점",
+    imageUrl: "gwenegitto.webp",
+  },
+     {
+    name: "삼팔집",
+    position: "대전",
+    imageUrl: "sampaljip.webp",
+  },
+    {
+    name: "갱도연탄구이",
+    position: "영통본점",
+    imageUrl: "gaengdo.webp",
+  },
+    {
+    name: "창심관",
+    position: "동탄",
+    imageUrl: "changshimgwan.webp",
+  },
+    {
+    name: "강세장어",
+    position: "여의도",
+    imageUrl: "gangsejangeo.webp",
+  },
   {
     name: "리정원",
     position: "목동점, 공덕점 외",
