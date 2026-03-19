@@ -3,7 +3,7 @@ import Hero from "./Hero";
 import Contact from "./Contact";
 import Portpolio from "./PortPolio";
 import Banner from "./Banner";
-import NewStore from "./Newstore";
+import NewStore from "./NewStore";
 
 const STORAGE_KEY = "hideMainPopup";
 
