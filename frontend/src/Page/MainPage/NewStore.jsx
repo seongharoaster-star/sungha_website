@@ -76,7 +76,7 @@ const Newstore = () => {
   }, []);
 
   return (
-    <div className="relative min-h-[65vh] md:min-h-[65vh] bg-black py-12 md:py-20 overflow-hidden">
+    <div className="relative min-h-[65vh] md:min-h-[5vh] bg-black py-12 md:py-20 overflow-hidden">
       {/* 커스텀 애니메이션 */}
       <style>
         {`
