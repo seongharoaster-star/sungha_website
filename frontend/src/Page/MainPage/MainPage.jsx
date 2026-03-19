@@ -3,6 +3,8 @@ import Hero from "./Hero";
 import Contact from "./Contact";
 import Portpolio from "./PortPolio";
 import Banner from "./Banner";
+import Newstore from "./Newstore";
+
 
 const STORAGE_KEY = "hideMainPopup";
 
@@ -107,6 +109,7 @@ const MainPage = () => {
 
       <Banner />
       <Portpolio />
+      <Newstore />
       <Hero />
       <Contact />
     </div>
