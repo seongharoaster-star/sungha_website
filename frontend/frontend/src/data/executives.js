@@ -35,9 +35,9 @@ const executives = [
     imageUrl: "shinsayakbang.webp",
   },
   {
-    name: "화로작",
-    position: "마곡",
-    imageUrl: "hwarojak.webp",
+    name: "마장동김씨",
+    position: "목동점, 봉명점, 산본점 외",
+    imageUrl: "majangdongkims.webp",
   },
   {
     name: "굽돌집",
@@ -50,9 +50,9 @@ const executives = [
     imageUrl: "suamgol.webp",
   },
   {
-    name: "화석구이",
-    position: "용산",
-    imageUrl: "hwaseokgui.webp",
+    name: "육화미",
+    position: "평택점, 두정점 외",
+    imageUrl: "yookhwame.webp",
   },
   {
     name: "고단",
@@ -60,14 +60,9 @@ const executives = [
     imageUrl: "godan.webp",
   },
   {
-    name: "갈비명가궁",
-    position: "세류본점",
-    imageUrl: "gung.webp",
-  },
-  {
-    name: "육화미",
-    position: "평택점, 두정점 외",
-    imageUrl: "yookhwame.webp",
+    name: "쌩굴쌩굴",
+    position: "본점",
+    imageUrl: "ssanggul.webp",
   },
   {
     name: "불로부터",
@@ -75,102 +70,11 @@ const executives = [
     imageUrl: "bulrobuteo.webp",
   },
   {
-    name: "1981한강집",
-    position: "용산",
-    imageUrl: "hangangzip.webp",
-  },
-  {
-    name: "반포로스",
-    position: "반포",
-    imageUrl: "banporos.webp",
-  },
-  {
-    name: "오몬자",
-    position: "강남",
-    imageUrl: "omonja.webp",
-  },
-  {
-    name: "다람",
-    position: "강동본점",
-    imageUrl: "daram.webp",
-  },
-  {
-    name: "대한팔도",
-    position: "나주",
-    imageUrl: "daehanpaldo.webp",
-  },
-  {
-    name: "강금옥쭈꾸미",
-    position: "동암역점",
-    imageUrl: "ganggeumok.webp",
-  },
-  {
-    name: "누룩목블랙",
-    position: "서초",
-    imageUrl: "nurukmok.webp",
-  },
-  {
-    name: "숯뚜껑",
-    position: "본점, 수원삼성점",
-    imageUrl: "sutttukkeong.webp",
-  },
-  {
-    name: "대들보숯불가든",
-    position: "의왕",
-    imageUrl: "daedeulbo.webp",
-  },
-  {
-    name: "남악상회",
-    position: "용산",
-    imageUrl: "namaksangheoi.webp",
-  },
-  {
-    name: "니쿠나인",
-    position: "을지로",
-    imageUrl: "niqunine.webp",
-  },
-  {
-    name: "고깃리88",
-    position: "다산직영점",
-    imageUrl: "gogisri88.webp",
-  },
-  {
-    name: "동천외식센터",
-    position: "양산",
-    imageUrl: "dongcheon.webp",
-  },
-  {
-    name: "돝돝",
-    position: "용산",
-    imageUrl: "dotdot.webp",
-  },
-  {
-    name: "고기록",
-    position: "거창",
-    imageUrl: "gogirok.webp",
-  },
-  {
-    name: "기운",
-    position: "강남역 본점",
-    imageUrl: "giun.webp",
-  },
-  {
-    name: "마장동김씨",
-    position: "목동점, 봉명점, 산본점 외",
-    imageUrl: "majangdongkims.webp",
-  },
-  {
-    name: "쌩굴쌩굴",
-    position: "본점",
-    imageUrl: "ssanggul.webp",
-  },
-
-  {
     name: "갯벌의조개",
     position: "여의도점, 성수점, 정자점 외",
     imageUrl: "tidalFlatClams.webp",
   },
-  {
+    {
     name: "묵힘",
     position: "방이동",
     imageUrl: "mukhim.webp",
@@ -185,48 +89,47 @@ const executives = [
     position: "마포점, 남영점",
     imageUrl: "wooweol.webp",
   },
-
+  {
+    name: "숯뚜껑",
+    position: "본점, 수원삼성점",
+    imageUrl: "sutttukkeong.webp",
+  },
   {
     name: "100년장어촌",
     position: "마곡본가",
     imageUrl: "100yearsjanguh.webp",
   },
-  {
+    {
     name: "안국약방",
     position: "종로",
     imageUrl: "angukyakbang.webp",
   },
-  {
+    {
     name: "양화돌판삼겹",
     position: "오목교",
     imageUrl: "yanghwadolpan.webp",
   },
-  {
+    {
     name: "궤네깃도중문흑돼지",
     position: "제주본점",
     imageUrl: "gwenegitto.webp",
   },
-  {
+     {
     name: "삼팔집",
     position: "대전",
     imageUrl: "sampaljip.webp",
   },
-  {
+    {
     name: "갱도연탄구이",
     position: "영통본점",
     imageUrl: "gaengdo.webp",
   },
-  {
+    {
     name: "창심관",
     position: "동탄",
     imageUrl: "changshimgwan.webp",
   },
-  {
-    name: "시절",
-    position: "광화문",
-    imageUrl: "sijeol.webp",
-  },
-  {
+    {
     name: "강세장어",
     position: "여의도",
     imageUrl: "gangsejangeo.webp",
@@ -241,7 +144,7 @@ const executives = [
     position: "청담본점, 블랙",
     imageUrl: "dosanjeongwook.webp",
   },
-  {
+    {
     name: "숯골",
     position: "성수",
     imageUrl: "suchgol.webp",
@@ -261,7 +164,7 @@ const executives = [
     position: "경기 하남시",
     imageUrl: "guhwa.webp",
   },
-  {
+    {
     name: "태백숯불닭갈비",
     position: "태백",
     imageUrl: "taebackmulgalbi.webp",
@@ -281,7 +184,7 @@ const executives = [
     position: "롯데월드몰점",
     imageUrl: "bikings.webp",
   },
-  {
+    {
     name: "그릴레",
     position: "잠실점",
     imageUrl: "grillle.webp",
@@ -311,7 +214,7 @@ const executives = [
     position: "답십리",
     imageUrl: "chicurry.webp",
   },
-  {
+    {
     name: "서울현방",
     position: "과천점",
     imageUrl: "seoulhyeonbang.webp",
@@ -401,7 +304,7 @@ const executives = [
     position: "배곧직영점, 정왕본점",
     imageUrl: "hamdon.webp",
   },
-  {
+    {
     name: "은비갈비",
     position: "인천서창점",
     imageUrl: "eunbigalbi.webp",
@@ -488,7 +391,7 @@ const executives = [
   },
   {
     name: "청담 비비큐",
-    position: "캐나다 토론토",
+  position: "캐나다 토론토",
     imageUrl: "cheongdambbq.webp",
   },
   {
@@ -557,7 +460,7 @@ const executives = [
     position: "본점",
     imageUrl: "jickhwamyeongga.webp",
   },
-  {
+    {
     name: "돌담흑돼지",
     position: "중문점",
     imageUrl: "doldam.webp",
